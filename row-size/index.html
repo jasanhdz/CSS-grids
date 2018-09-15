@@ -12,8 +12,8 @@
 
     .container {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-template-rows: repeat(2, 200px);
+      grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [destacado-end] 1fr [linea5] 1fr [destacado2-end] 1fr [linea7] 1fr [final];
+      grid-template-rows: [inicio] 200px [linea2] 200px [final];
       grid-gap: 5px;
       height: 100vh;
 
@@ -28,17 +28,22 @@
       /* background: blue;
       grid-column-start: 1;
       grid-column-end: 3; */
-      grid-column: 1 / span 3;
-      grid-row: 1/ span 2;
+      /* grid-column: 1 / span 3;
+      grid-row: 1/ span 2; */
+      grid-column: inicio / destacado-end;
+      grid-row: inicio / final;
     }
     .item:nth-of-type(2){
    /* cuando la linea de inicio es 1 siempre no es necesario
       especificar que arranca en 1 porque grid, lo hace por defecto. */
-      grid-column: 4 / span 2;
-      grid-row: 1 / span 2;
+      /* grid-column: 4 / span 2;
+      grid-row: 1 / span 2; */
+      grid-column: destacado-end / destacado2-end;
+      grid-row: inicio / final;
     }
     .item:nth-of-type(3){
-      grid-column: 6 / span 2;
+      /* grid-column: 6 / span 2; */
+      grid-column: destacado2-end / final;
     }
 
     .item:nth-of-type(8){
