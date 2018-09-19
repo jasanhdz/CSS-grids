@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  height: 100vh;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(4, 100px);
+
+  /* justify-content | align-content: start, center, end, stretch, space-around, space-between, space-evenly */
+  justify-content: center;
+  align-content: center;
+}
+
+/* Para alinear el contenido de Filas y columnas: 
+justify-content: valor; horizontal
+align-content: valor; vertical
+
+Para distribuir uniformemente:
+con space-around: los items tienen el mismo espacio a su alrededor
+con space-evenly: Hay un espacio mas homogeneo entre items
+con space-between: El primer item al inicio y el ultimo al final
+
+*/
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}

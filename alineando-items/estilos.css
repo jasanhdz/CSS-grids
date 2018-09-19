@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid; 
+  grid-gap: 5px;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  /* justify-items: Alineado de forma horizontal 
+    Recibe valores de: Start, end, center, stretch*/
+  /* align-items: Alineado de forma vertical
+    Recibe exactamente los mismos: start, end, center, stretch */
+
+  justify-items: center;
+  align-items: center;
+
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+.item:nth-of-type(5) {
+  align-self: start;
+  justify-self: start;
+}
+/*Para alinear contenido:
+justify-items: valor; para alineación horizontal
+align-items: valor; para alineación vertical
+Los valores que toman por defecto es stretch el cual hace que tomen 
+todo el valor asignado en la fila o columna.
+
+Para asignar la alineación de un solo elemento podemos usar:
+align-self: valor;
+justify-self: valor;
+*/

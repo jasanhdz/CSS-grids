@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  /* grid-template-columns: 200px 200px 200px; */
+  /* grid-template-rows: 300px 300px; */
+  /* grid-template: filas / columnas; */
+  /* grid-template: 300px 100px 100px / 200px 200px 100px; */
+  
+  /* espaciado en columnas */
+  grid-column-gap: 30px;
+
+  /* espaciado en filas */
+  grid-row-gap: 30px;
+  
+  /* grid-gap: filas columnas; Espaciado */
+  grid-gap: 10px;
+  /* funcion fr */
+  /* grid-template: 300px 100px 100px / 1fr 1fr 1fr; */
+
+  /* Funcion repeat(columnas, fracciones o media) */
+  /* grid-template: 300px 100px 100px / repeat(4, 1fr); */
+  /* grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr)); */
+  grid-template: 300px 100px 100px / minmax(200px, 1fr) 1fr 1fr 1fr;
+
+
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+.item:nth-of-type(4) {
+  background: blue;
+  overflow: auto;
+  /* display: subgrid; Hereda la configuración del grid padre */
+  /* display: inline-grid;  Muestra el grid en una sola linea*/
+  display: grid;
+  /* grid-template: filas / columnas; */
+  grid-template: 50px 50px 50px / 200px 200px 200px;
+}
+.item .item {
+  background: yellow;
+}
