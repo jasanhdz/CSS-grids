@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  /* grid-template: filas / columnas */
+  grid-template: 100px 300px 100px repeat(3, 200px) 150px / repeat(3, 1fr);
+  height: 100vh;
+  grid-gap: 10px;
+  grid-template-areas:  "header header header"
+                        "clase clase coment"
+                        "descr descr coment"
+                        "algo algo algo"
+                        "item item2 item3"
+                        "info info noticias"
+                        "footer footer footer";
+}
+
+.item {
+  background: lightblue;
+  border: 1px solid red;
+}
+.Header {
+  grid-area: header;
+  background-color: blue;
+}
+.Clase {
+  grid-area: clase;
+  background-color: orange;
+}
+.Comentarios {
+  grid-area: coment;
+  background-color: gray;
+}
+.Description {
+  grid-area: descr;
+  background-color: rgb(219, 255, 128);
+}
+.Algo-mas {
+  grid-area: algo;
+  background-color: pink;
+}
+.Item1 {
+  grid-area: item;
+  background-color: green;
+}
+.Item2 {
+  grid-area: item2;
+  background-color: green;
+}
+.Item3 {
+  grid-area: item3;
+  background-color: green;
+}
+.Information {
+  grid-area: info;
+  background-color: rgb(255, 111, 111);
+}
+.Noticias {
+  grid-area: noticias;
+  background-color: yellow;
+}
+.Footer {
+  grid-area: footer;
+  background-color: mediumpurple;
+}
